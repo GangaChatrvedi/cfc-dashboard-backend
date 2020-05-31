@@ -9,6 +9,7 @@ export * from './decorators/resource.decorator';
 export * from './decorators/scopes.decorator';
 export * from './guards/auth.guard';
 export * from './guards/resource.guard';
+export * from './constants';
 
 @Module({})
 export class KeycloakConnectModule {

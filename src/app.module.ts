@@ -23,7 +23,7 @@ import { APP_GUARD } from '@nestjs/core';
     // These are in order, see https://docs.nestjs.com/guards#binding-guards
     // for more information
 
-    AppService, 
+    AppService,
     // This adds a global level authentication guard, you can also have it scoped
     // if you like.
     //
@@ -43,3 +43,5 @@ import { APP_GUARD } from '@nestjs/core';
   ],
 })
 export class AppModule {}
+
+
