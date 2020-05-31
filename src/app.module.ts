@@ -15,9 +15,9 @@ import { APP_GUARD } from '@nestjs/core';
       authServerUrl: 'http://localhost:8080/auth',
       realm: 'master',
       clientId: 'google-client',
-      secret: 'e5d608e0-ac33-4d4a-9c24-6c94d9db4458'
-    }),
-    KeycloakModule,
+      secret: 'e5d608e0-ac33-4d4a-9c24-6c94d9db4458',
+      cookieKey: 'KEYCLOAK_JWT'
+    })
   ],
   controllers: [AppController],
   providers: [
