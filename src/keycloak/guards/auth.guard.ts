@@ -7,7 +7,7 @@ import {
 } from '@nestjs/common';
 import { Keycloak } from 'keycloak-connect';
 import { KEYCLOAK_INSTANCE, KEYCLOAK_CONNECT_OPTIONS } from '../constants';
-import { KeycloakConnectOptions } from 'src/interface/keycloak-connect-options.interface';
+import { KeycloakConnectOptions } from '../interface/keycloak-connect-options.interface';
 
 /**
  * An authentication guard. Will return a 401 unauthorized when it is unable to

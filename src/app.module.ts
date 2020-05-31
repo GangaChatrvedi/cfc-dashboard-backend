@@ -2,21 +2,22 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import {
-  KeycloakConnectModule,
+  KeycloakModule,
   ResourceGuard,
   AuthGuard,
-} from './keycloak-connect.module';
+} from './keycloak/keycloak.module';
 import { APP_GUARD } from '@nestjs/core';
 
 
 @Module({
   imports: [
-    KeycloakConnectModule.register({
+    KeycloakModule.register({
       authServerUrl: 'http://localhost:8080/auth',
       realm: 'master',
       clientId: 'google-client',
       secret: 'e5d608e0-ac33-4d4a-9c24-6c94d9db4458'
     }),
+    KeycloakModule,
   ],
   controllers: [AppController],
   providers: [

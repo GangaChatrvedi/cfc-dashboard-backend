@@ -12,10 +12,10 @@ export * from './guards/resource.guard';
 export * from './constants';
 
 @Module({})
-export class KeycloakConnectModule {
+export class KeycloakModule {
   public static register(opts: KeycloakConnectOptions): DynamicModule {
     return {
-      module: KeycloakConnectModule,
+      module: KeycloakModule,
       providers: [
         {
           provide: KEYCLOAK_CONNECT_OPTIONS,
@@ -31,7 +31,7 @@ export class KeycloakConnectModule {
     opts: KeycloakConnectModuleAsyncOptions,
   ): DynamicModule {
     return {
-      module: KeycloakConnectModule,
+      module: KeycloakModule,
       imports: opts.imports || [],
       providers: [this.createConnectProviders(opts), this.keycloakProvider],
       exports: [this.keycloakProvider],
